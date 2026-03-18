@@ -5,21 +5,21 @@
 class SymphonyGo < Formula
   desc "Autonomous AI agent daemon that drives Linear issues through Claude-powered agentic loops."
   homepage "https://github.com/vnovick/symphony-go"
-  version "0.0.1"
+  version "0.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.1/symphony-go_darwin_amd64.tar.gz"
-      sha256 "25ac301af24f9aea3785fa49bb61bc133fea4b10778078499a50d51b80852039"
+      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.2/symphony-go_darwin_amd64.tar.gz"
+      sha256 "a078a32cbf76963d468e701238d65c185e2683488ff95617cf907b487f36833d"
 
       define_method(:install) do
         bin.install "symphony"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.1/symphony-go_darwin_arm64.tar.gz"
-      sha256 "5755bf293b83d8257e0c1c9c2305359c2b13b1d713c517d8d9f8e236bca596d4"
+      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.2/symphony-go_darwin_arm64.tar.gz"
+      sha256 "fcba78dd7bb5546567efb1b79163c67b7ebcd0116ac0d3f69b937777d1d7f788"
 
       define_method(:install) do
         bin.install "symphony"
@@ -29,15 +29,15 @@ class SymphonyGo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.1/symphony-go_linux_amd64.tar.gz"
-      sha256 "83034458d3d503f9fd01d03cd11cd88bc407ba0be9df9b2d1b8a6babeef2fe60"
+      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.2/symphony-go_linux_amd64.tar.gz"
+      sha256 "c459b40e05e8357daacc6e2a6461fd5d5144c0136c44c47a4e822faf10c73f91"
       define_method(:install) do
         bin.install "symphony"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.1/symphony-go_linux_arm64.tar.gz"
-      sha256 "a10d99e84dab8de8b65a80a3bd93845439f165bcaa3e6893573bdc85cadac173"
+      url "https://github.com/vnovick/symphony-go/releases/download/v0.0.2/symphony-go_linux_arm64.tar.gz"
+      sha256 "3543c3d15250c5483816a3e1994c21222169ca8a47fdec6367f5c192c7fecd1b"
       define_method(:install) do
         bin.install "symphony"
       end
