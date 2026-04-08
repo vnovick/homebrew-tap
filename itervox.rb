@@ -5,21 +5,21 @@
 class Itervox < Formula
   desc "Autonomous AI agent daemon that drives Linear issues through Claude-powered agentic loops."
   homepage "https://github.com/vnovick/itervox"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vnovick/itervox/releases/download/v0.1.1/itervox_darwin_amd64.tar.gz"
-      sha256 "f73979603fcac4b7aebeef5dd966ccbb75ff6da86c856fa35bd5b6563fd742d9"
+      url "https://github.com/vnovick/itervox/releases/download/v0.1.2/itervox_darwin_amd64.tar.gz"
+      sha256 "927e395c5f0002acfcddedb2ca99423592ebca3abf1d19190231773ef61ec912"
 
       define_method(:install) do
         bin.install "itervox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vnovick/itervox/releases/download/v0.1.1/itervox_darwin_arm64.tar.gz"
-      sha256 "44c49e4fcc9398c44b88e0d0ba9f1a82869e9f9c712d76bc73fd202f9a77cc9e"
+      url "https://github.com/vnovick/itervox/releases/download/v0.1.2/itervox_darwin_arm64.tar.gz"
+      sha256 "b2dfd1f3f3c2e41bee85738c9c274110ecdd112fec1e9e281d458040d657659d"
 
       define_method(:install) do
         bin.install "itervox"
@@ -29,15 +29,15 @@ class Itervox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vnovick/itervox/releases/download/v0.1.1/itervox_linux_amd64.tar.gz"
-      sha256 "28a60e344dd5c3c9f4a77d2edabc8910c21ab9e1fbe5eee0edfc0aa20b4bb7e2"
+      url "https://github.com/vnovick/itervox/releases/download/v0.1.2/itervox_linux_amd64.tar.gz"
+      sha256 "055c441f507611adb6d83cd47e08f6b5f86444d0c7b89ac9b96e90e267b507b1"
       define_method(:install) do
         bin.install "itervox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vnovick/itervox/releases/download/v0.1.1/itervox_linux_arm64.tar.gz"
-      sha256 "862345bd02d8067b666c2d75c4fc1c511d18769aaccaa0b2d49fe8b8ba3adba2"
+      url "https://github.com/vnovick/itervox/releases/download/v0.1.2/itervox_linux_arm64.tar.gz"
+      sha256 "a7f4ad41df52128ab62dd2b6128163d977963ca442df6e7aa06b09840130e641"
       define_method(:install) do
         bin.install "itervox"
       end
